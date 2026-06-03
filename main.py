@@ -7,14 +7,9 @@ from src.config import load_config
 from src.orchestrator import run_pipeline
 from src.orchestrator_large import run_large_pipeline
 from src.reporting import write_report
+from dotenv import load_dotenv
 
-
-def load_environment() -> None:
-    try:
-        from dotenv import load_dotenv
-    except ImportError:
-        return
-    load_dotenv()
+load_dotenv()
 
 
 def parse_args() -> argparse.Namespace:
@@ -29,7 +24,6 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
-    load_environment()
     args = parse_args()
     config = load_config(args.config)
     if args.mode == "large":
@@ -42,3 +36,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
