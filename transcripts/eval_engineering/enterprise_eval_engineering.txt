@@ -1,0 +1,66 @@
+Engineering Lead: SAML SSO is implemented for administrator accounts using the authentication service.
+Backend Engineer: The SAML setup flow accepts identity provider metadata upload.
+Security Engineer: Certificate validation is implemented for uploaded SAML metadata.
+Backend Engineer: Bulk user invitation through CSV upload is implemented with async workers.
+Platform Engineer: The CSV invite worker supports ten thousand rows per file.
+Frontend Engineer: CSV import errors currently show row number and field name.
+Frontend Engineer: Human readable CSV error messages are deferred to a later usability sprint.
+Backend Engineer: Administrator audit logs are stored in Postgres with seven year retention.
+Backend Engineer: Audit log records include actor, action, timestamp, IP address, and affected resource.
+Frontend Engineer: Searchable audit log screen is implemented in the admin console.
+Billing Engineer: Monthly billing CSV export is implemented.
+Billing Engineer: PDF billing export is not included in the current release.
+Billing Engineer: Billing exports include account id, invoice id, tax, credits, and total due.
+Notifications Engineer: Payment method expiration alerts are implemented for thirty days, seven days, and one day before expiration.
+Engineering Lead: Self-service role management is partially implemented for standard and billing roles.
+Engineering Lead: Security role editing still requires support intervention.
+Security Engineer: Read-only auditor role is implemented.
+Security Engineer: Auditor permissions allow reports and logs but block settings changes.
+Frontend Engineer: User list filtering supports status, role, and last login date.
+Frontend Engineer: Dashboard performance optimization is deferred until after the analytics migration.
+Notifications Engineer: Failed SSO setup notification emails are implemented.
+Security Engineer: Suspicious login spike detection is planned but not implemented.
+Data Engineer: Daily usage metrics export to the analytics warehouse.
+Data Engineer: Usage export includes active users, API calls, storage usage, and workspace count.
+Data Engineer: Analytics export excludes customer secrets and authentication tokens.
+Data Engineer: Analytics records are pseudonymized before warehouse export.
+Platform Engineer: Public API health endpoint is implemented.
+Platform Engineer: The health endpoint reports database, Redis cache, and queue status.
+API Engineer: Public API rate limiting is implemented with Redis token buckets.
+API Engineer: Per-contract rate limit configuration is planned but not available yet.
+Frontend Engineer: Custom branding supports logo upload and primary color.
+Notifications Engineer: Custom email footer text is not implemented.
+Compliance Engineer: Data deletion workflow completes within thirty days.
+Compliance Engineer: Immutable deletion evidence is written to the audit table.
+Compliance Engineer: Legal hold is not implemented.
+Compliance Engineer: Deletion prevention for legal hold accounts is future work.
+Platform Engineer: EU regional data residency is on the infrastructure roadmap.
+Platform Engineer: EU-only storage and compute isolation is not available in the current deployment.
+Operations Engineer: Daily backups are running.
+Operations Engineer: Point-in-time recovery is configured with a fifteen minute recovery point objective.
+Security Engineer: Customer documents are encrypted at rest using managed cloud keys.
+Security Engineer: Ninety day key rotation is implemented for customer document encryption keys.
+Notifications Engineer: Monday account activity digest emails are implemented.
+Notifications Engineer: Digest emails summarize new users, deleted users, failed logins, and billing changes.
+Support Engineer: In-app support ticket widget is implemented.
+Support Engineer: Ticket creation attaches current page URL and account id.
+Platform Engineer: Workspace-level feature flags are editable only by internal operators.
+Internal Tools Engineer: Deployment status is visible to internal operators.
+Internal Tools Engineer: Deployment status shows version, environment, region, and last deploy time.
+Frontend Engineer: Mobile billing summary page is implemented.
+Frontend Engineer: Mobile usage dashboard is deferred to the responsive layout sprint.
+Security Engineer: Mobile routes reuse the same permission checks as desktop.
+Frontend Engineer: Dark mode for the admin console is not implemented.
+Accessibility Engineer: WCAG 2.1 AA contrast audit has not started.
+Accessibility Engineer: Keyboard accessibility fixes are planned for the next frontend quality sprint.
+Support Engineer: Live chat support is not included because the team selected ticket-based support for this release.
+Platform Engineer: Custom domains are planned but not implemented.
+Security Engineer: Automatic TLS certificate provisioning for custom domains is not implemented.
+Data Engineer: Account ZIP export is partially implemented for users, roles, and invoices.
+Data Engineer: Account ZIP export does not include audit logs or support tickets yet.
+Backend Engineer: Webhook endpoint configuration is implemented for account events.
+Security Engineer: Webhook HMAC payload signing is implemented.
+Operations Engineer: Failed webhook delivery retries with exponential backoff are implemented.
+Identity Engineer: SCIM user provisioning is not implemented.
+Identity Engineer: SCIM create, update, deactivate, and group assignment events are planned for a future enterprise identity milestone.
+

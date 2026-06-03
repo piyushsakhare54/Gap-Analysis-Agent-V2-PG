@@ -1,0 +1,1669 @@
+{
+  "metadata": {
+    "generated_at": "2026-06-02T10:50:44.376943+00:00",
+    "mode": "large",
+    "business_transcript_count": 2,
+    "engineering_transcript_count": 2,
+    "requirement_count": 55,
+    "solution_count": 32,
+    "gap_count": 24,
+    "chunk_count": 6,
+    "embedding_provider": "hashing",
+    "embedding_model": "BAAI/bge-m3",
+    "top_k": 5,
+    "min_score": 0.15,
+    "warnings": [],
+    "audit": {
+      "critic": "deterministic",
+      "retrieval": "cosine"
+    }
+  },
+  "requirements": [
+    {
+      "requirement_id": "REQ-0001",
+      "statement": "The enterprise onboarding flow must support SSO login for all customer administrators.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The enterprise onboarding flow must support SSO login for all customer administrators.",
+      "source_line_range": [
+        1,
+        1
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0002",
+      "statement": "We need SAML authentication with metadata upload for enterprise identity providers.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "We need SAML authentication with metadata upload for enterprise identity providers.",
+      "source_line_range": [
+        2,
+        2
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0003",
+      "statement": "The customer portal must allow admins to invite users by email in bulk.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The customer portal must allow admins to invite users by email in bulk.",
+      "source_line_range": [
+        3,
+        3
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0004",
+      "statement": "We require uploaded CSV invite files to support at least five thousand rows.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "We require uploaded CSV invite files to support at least five thousand rows.",
+      "source_line_range": [
+        4,
+        4
+      ],
+      "confidence": 0.72,
+      "constraints": [
+        "We require uploaded CSV invite files to support at least five thousand rows."
+      ],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0005",
+      "statement": "The platform must keep audit logs for administrator actions for seven years.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The platform must keep audit logs for administrator actions for seven years.",
+      "source_line_range": [
+        5,
+        5
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0006",
+      "statement": "Audit logs should include actor, action, timestamp, IP address, and affected resource.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Audit logs should include actor, action, timestamp, IP address, and affected resource.",
+      "source_line_range": [
+        6,
+        6
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0007",
+      "statement": "Customers need a searchable audit log screen inside the admin console.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Customers need a searchable audit log screen inside the admin console.",
+      "source_line_range": [
+        7,
+        7
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0008",
+      "statement": "The billing area should export invoice summaries in CSV and PDF format.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The billing area should export invoice summaries in CSV and PDF format.",
+      "source_line_range": [
+        8,
+        8
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0009",
+      "statement": "Monthly billing exports must include account id, invoice id, tax, credits, and total due.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Monthly billing exports must include account id, invoice id, tax, credits, and total due.",
+      "source_line_range": [
+        9,
+        9
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0010",
+      "statement": "Account admins need self-service role management for standard, billing, and security roles.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Account admins need self-service role management for standard, billing, and security roles.",
+      "source_line_range": [
+        10,
+        10
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0011",
+      "statement": "The dashboard must load within two seconds for accounts with up to ten thousand users.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The dashboard must load within two seconds for accounts with up to ten thousand users.",
+      "source_line_range": [
+        11,
+        11
+      ],
+      "confidence": 0.72,
+      "constraints": [
+        "The dashboard must load within two seconds for accounts with up to ten thousand users."
+      ],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0012",
+      "statement": "The user list should support filtering by status, role, and last login date.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The user list should support filtering by status, role, and last login date.",
+      "source_line_range": [
+        12,
+        12
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0013",
+      "statement": "The portal must send notification emails for failed SSO setup attempts.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The portal must send notification emails for failed SSO setup attempts.",
+      "source_line_range": [
+        13,
+        13
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0014",
+      "statement": "The system should detect suspicious login spikes and alert security admins.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The system should detect suspicious login spikes and alert security admins.",
+      "source_line_range": [
+        14,
+        14
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0015",
+      "statement": "We need daily usage metrics exported to the analytics warehouse.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "We need daily usage metrics exported to the analytics warehouse.",
+      "source_line_range": [
+        15,
+        15
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0016",
+      "statement": "Usage metrics must include active users, API calls, storage usage, and workspace count.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Usage metrics must include active users, API calls, storage usage, and workspace count.",
+      "source_line_range": [
+        16,
+        16
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0017",
+      "statement": "The API should expose a health endpoint for uptime monitoring.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The API should expose a health endpoint for uptime monitoring.",
+      "source_line_range": [
+        17,
+        17
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0018",
+      "statement": "The health endpoint must report database, cache, and queue status.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The health endpoint must report database, cache, and queue status.",
+      "source_line_range": [
+        18,
+        18
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0019",
+      "statement": "The application must support custom branding for enterprise customers.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The application must support custom branding for enterprise customers.",
+      "source_line_range": [
+        19,
+        19
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0020",
+      "statement": "Branding should include logo upload, primary color, and email footer text.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Branding should include logo upload, primary color, and email footer text.",
+      "source_line_range": [
+        20,
+        20
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0021",
+      "statement": "Data deletion requests must complete within thirty days.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Data deletion requests must complete within thirty days.",
+      "source_line_range": [
+        21,
+        21
+      ],
+      "confidence": 0.72,
+      "constraints": [
+        "Data deletion requests must complete within thirty days."
+      ],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0022",
+      "statement": "The deletion workflow should create an immutable evidence record.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The deletion workflow should create an immutable evidence record.",
+      "source_line_range": [
+        22,
+        22
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0023",
+      "statement": "Customers require an in-app support ticket widget.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Customers require an in-app support ticket widget.",
+      "source_line_range": [
+        23,
+        23
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0024",
+      "statement": "Support tickets should attach the current page URL and account id automatically.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Support tickets should attach the current page URL and account id automatically.",
+      "source_line_range": [
+        24,
+        24
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0025",
+      "statement": "The roadmap requires workspace-level feature flags.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The roadmap requires workspace-level feature flags.",
+      "source_line_range": [
+        25,
+        25
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0026",
+      "statement": "Feature flags should be editable by internal operators only.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Feature flags should be editable by internal operators only.",
+      "source_line_range": [
+        26,
+        26
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0027",
+      "statement": "We need rate limiting for public API endpoints.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "We need rate limiting for public API endpoints.",
+      "source_line_range": [
+        27,
+        27
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0028",
+      "statement": "API rate limits must be configurable per enterprise contract.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "API rate limits must be configurable per enterprise contract.",
+      "source_line_range": [
+        28,
+        28
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0029",
+      "statement": "The system should notify billing owners before payment method expiration.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The system should notify billing owners before payment method expiration.",
+      "source_line_range": [
+        29,
+        29
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0030",
+      "statement": "Payment expiration alerts must be sent thirty days, seven days, and one day before expiration.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Payment expiration alerts must be sent thirty days, seven days, and one day before expiration.",
+      "source_line_range": [
+        30,
+        30
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0031",
+      "statement": "Admins need an account activity digest email every Monday.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Admins need an account activity digest email every Monday.",
+      "source_line_range": [
+        31,
+        31
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0032",
+      "statement": "The digest should summarize new users, deleted users, failed logins, and billing changes.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The digest should summarize new users, deleted users, failed logins, and billing changes.",
+      "source_line_range": [
+        32,
+        32
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0033",
+      "statement": "The system must support regional data residency for EU customers.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The system must support regional data residency for EU customers.",
+      "source_line_range": [
+        33,
+        33
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0034",
+      "statement": "EU customer data should remain in EU storage and compute regions.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "EU customer data should remain in EU storage and compute regions.",
+      "source_line_range": [
+        34,
+        34
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0035",
+      "statement": "Backups must run every day and support point-in-time recovery.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Backups must run every day and support point-in-time recovery.",
+      "source_line_range": [
+        35,
+        35
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0036",
+      "statement": "Recovery point objective should be no more than fifteen minutes.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Recovery point objective should be no more than fifteen minutes.",
+      "source_line_range": [
+        36,
+        36
+      ],
+      "confidence": 0.72,
+      "constraints": [
+        "Recovery point objective should be no more than fifteen minutes."
+      ],
+      "notes": [
+        "Merged duplicate from large_business_transcript:(36, 36)"
+      ]
+    },
+    {
+      "requirement_id": "REQ-0037",
+      "statement": "We require encryption at rest for all customer documents.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "We require encryption at rest for all customer documents.",
+      "source_line_range": [
+        37,
+        37
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": [
+        "Merged duplicate from large_business_transcript:(37, 37)"
+      ]
+    },
+    {
+      "requirement_id": "REQ-0038",
+      "statement": "Customer document encryption keys should rotate every ninety days.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Customer document encryption keys should rotate every ninety days.",
+      "source_line_range": [
+        38,
+        38
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": [
+        "Merged duplicate from large_business_transcript:(38, 38)"
+      ]
+    },
+    {
+      "requirement_id": "REQ-0039",
+      "statement": "The analytics export must not include customer secrets or authentication tokens.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The analytics export must not include customer secrets or authentication tokens.",
+      "source_line_range": [
+        39,
+        39
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": [
+        "Merged duplicate from large_business_transcript:(39, 39)"
+      ]
+    },
+    {
+      "requirement_id": "REQ-0040",
+      "statement": "Analytics records should be pseudonymized before export.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Analytics records should be pseudonymized before export.",
+      "source_line_range": [
+        40,
+        40
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": [
+        "Merged duplicate from large_business_transcript:(40, 40)"
+      ]
+    },
+    {
+      "requirement_id": "REQ-0041",
+      "statement": "The admin console should show clear error messages for failed CSV imports.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The admin console should show clear error messages for failed CSV imports.",
+      "source_line_range": [
+        41,
+        41
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0042",
+      "statement": "CSV import errors must identify the row number and failed field.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "CSV import errors must identify the row number and failed field.",
+      "source_line_range": [
+        42,
+        42
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0043",
+      "statement": "The portal needs a read-only auditor role.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The portal needs a read-only auditor role.",
+      "source_line_range": [
+        43,
+        43
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0044",
+      "statement": "Auditor users should see reports and logs but cannot change settings.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Auditor users should see reports and logs but cannot change settings.",
+      "source_line_range": [
+        44,
+        44
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0045",
+      "statement": "The application must support legal hold for selected customer accounts.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The application must support legal hold for selected customer accounts.",
+      "source_line_range": [
+        45,
+        45
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0046",
+      "statement": "Legal hold should prevent deletion until the hold is removed.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Legal hold should prevent deletion until the hold is removed.",
+      "source_line_range": [
+        46,
+        46
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0047",
+      "statement": "The engineering team needs deployment status visible to internal operators.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The engineering team needs deployment status visible to internal operators.",
+      "source_line_range": [
+        47,
+        47
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0048",
+      "statement": "Deployment status should show version, environment, region, and last deploy time.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Deployment status should show version, environment, region, and last deploy time.",
+      "source_line_range": [
+        48,
+        48
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0049",
+      "statement": "The mobile layout must support the billing summary and usage dashboard.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "The mobile layout must support the billing summary and usage dashboard.",
+      "source_line_range": [
+        49,
+        49
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0050",
+      "statement": "Mobile pages should preserve the same permission model as desktop.",
+      "source_transcript": "large_business_transcript",
+      "source_quote": "Mobile pages should preserve the same permission model as desktop.",
+      "source_line_range": [
+        50,
+        50
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0051",
+      "statement": "The customer portal must support passwordless login for enterprise users.",
+      "source_transcript": "sample",
+      "source_quote": "The customer portal must support passwordless login for enterprise users.",
+      "source_line_range": [
+        1,
+        1
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0052",
+      "statement": "We need audit logs retained for at least seven years for regulated customers.",
+      "source_transcript": "sample",
+      "source_quote": "We need audit logs retained for at least seven years for regulated customers.",
+      "source_line_range": [
+        2,
+        2
+      ],
+      "confidence": 0.72,
+      "constraints": [
+        "We need audit logs retained for at least seven years for regulated customers."
+      ],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0053",
+      "statement": "The system should export monthly billing reports in CSV format.",
+      "source_transcript": "sample",
+      "source_quote": "The system should export monthly billing reports in CSV format.",
+      "source_line_range": [
+        3,
+        3
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0054",
+      "statement": "We require response time under two seconds for dashboard page loads.",
+      "source_transcript": "sample",
+      "source_quote": "We require response time under two seconds for dashboard page loads.",
+      "source_line_range": [
+        4,
+        4
+      ],
+      "confidence": 0.72,
+      "constraints": [
+        "We require response time under two seconds for dashboard page loads."
+      ],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0055",
+      "statement": "The roadmap needs self-service role management for account administrators.",
+      "source_transcript": "sample",
+      "source_quote": "The roadmap needs self-service role management for account administrators.",
+      "source_line_range": [
+        5,
+        5
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    }
+  ],
+  "solutions": [
+    {
+      "solution_id": "SOL-0001",
+      "what": "We implemented SSO login for enterprise administrators using SAML and FastAPI.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "We implemented SSO login for enterprise administrators using SAML and FastAPI.",
+      "source_line_range": [
+        1,
+        1
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "api",
+        "fastapi"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0002",
+      "what": "The SAML service supports metadata upload and validates identity provider certificates.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "The SAML service supports metadata upload and validates identity provider certificates.",
+      "source_line_range": [
+        2,
+        2
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0003",
+      "what": "Bulk user invites are implemented with CSV parsing and async processing.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Bulk user invites are implemented with CSV parsing and async processing.",
+      "source_line_range": [
+        3,
+        3
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0004",
+      "what": "The invite worker currently supports ten thousand CSV rows per upload.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "The invite worker currently supports ten thousand CSV rows per upload.",
+      "source_line_range": [
+        4,
+        4
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0005",
+      "what": "Administrator audit logging is built in Postgres with seven year retention.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Administrator audit logging is built in Postgres with seven year retention.",
+      "source_line_range": [
+        5,
+        5
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "postgres"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0006",
+      "what": "The searchable audit log screen is implemented in the admin console.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "The searchable audit log screen is implemented in the admin console.",
+      "source_line_range": [
+        7,
+        7
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0007",
+      "what": "PDF invoice export is deferred until the next billing milestone.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "PDF invoice export is deferred until the next billing milestone.",
+      "source_line_range": [
+        9,
+        9
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [
+        "PDF invoice export is deferred until the next billing milestone."
+      ],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0008",
+      "what": "Role management is currently read-only and self-service editing is out of scope for this release.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Role management is currently read-only and self-service editing is out of scope for this release.",
+      "source_line_range": [
+        11,
+        11
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [
+        "Role management is currently read-only and self-service editing is out of scope for this release."
+      ],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0009",
+      "what": "The user list supports filtering by status, role, and last login date.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "The user list supports filtering by status, role, and last login date.",
+      "source_line_range": [
+        12,
+        12
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0010",
+      "what": "Dashboard performance work is deferred until after the analytics migration.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Dashboard performance work is deferred until after the analytics migration.",
+      "source_line_range": [
+        13,
+        13
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [
+        "Dashboard performance work is deferred until after the analytics migration."
+      ],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0011",
+      "what": "Failed SSO setup emails are implemented through the notification service.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Failed SSO setup emails are implemented through the notification service.",
+      "source_line_range": [
+        14,
+        14
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0012",
+      "what": "Daily usage metrics are exported to the analytics warehouse using the batch pipeline.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Daily usage metrics are exported to the analytics warehouse using the batch pipeline.",
+      "source_line_range": [
+        16,
+        16
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0013",
+      "what": "Usage export includes active users, API calls, storage usage, and workspace count.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Usage export includes active users, API calls, storage usage, and workspace count.",
+      "source_line_range": [
+        17,
+        17
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "api"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0014",
+      "what": "The API health endpoint is implemented for uptime monitoring.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "The API health endpoint is implemented for uptime monitoring.",
+      "source_line_range": [
+        18,
+        18
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "api"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0015",
+      "what": "The health endpoint reports database, Redis cache, and queue status.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "The health endpoint reports database, Redis cache, and queue status.",
+      "source_line_range": [
+        19,
+        19
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "redis"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0016",
+      "what": "Custom branding supports logo upload and primary color configuration.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Custom branding supports logo upload and primary color configuration.",
+      "source_line_range": [
+        20,
+        20
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0017",
+      "what": "Data deletion workflow is implemented with a thirty day SLA.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Data deletion workflow is implemented with a thirty day SLA.",
+      "source_line_range": [
+        22,
+        22
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0018",
+      "what": "The in-app support ticket widget is implemented in the admin console.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "The in-app support ticket widget is implemented in the admin console.",
+      "source_line_range": [
+        24,
+        24
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0019",
+      "what": "Workspace-level feature flags are implemented for internal operators.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Workspace-level feature flags are implemented for internal operators.",
+      "source_line_range": [
+        26,
+        26
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0020",
+      "what": "Public API rate limiting is implemented with Redis token buckets.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Public API rate limiting is implemented with Redis token buckets.",
+      "source_line_range": [
+        28,
+        28
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "api",
+        "redis"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0021",
+      "what": "Per-contract enterprise rate limit configuration is not implemented yet.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Per-contract enterprise rate limit configuration is not implemented yet.",
+      "source_line_range": [
+        29,
+        29
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": [
+        "Merged duplicate from large_engineering_transcript:(46, 46)"
+      ]
+    },
+    {
+      "solution_id": "SOL-0022",
+      "what": "Payment method expiration notifications are implemented for billing owners.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Payment method expiration notifications are implemented for billing owners.",
+      "source_line_range": [
+        30,
+        30
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": [
+        "Merged duplicate from large_engineering_transcript:(50, 50)"
+      ]
+    },
+    {
+      "solution_id": "SOL-0023",
+      "what": "Monday account activity digest emails are implemented.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Monday account activity digest emails are implemented.",
+      "source_line_range": [
+        32,
+        32
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0024",
+      "what": "Customer documents are encrypted at rest using managed cloud keys.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Customer documents are encrypted at rest using managed cloud keys.",
+      "source_line_range": [
+        38,
+        38
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": [
+        "Merged duplicate from large_engineering_transcript:(38, 38)"
+      ]
+    },
+    {
+      "solution_id": "SOL-0025",
+      "what": "Ninety day customer document key rotation is implemented.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Ninety day customer document key rotation is implemented.",
+      "source_line_range": [
+        39,
+        39
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": [
+        "Merged duplicate from large_engineering_transcript:(39, 39)"
+      ]
+    },
+    {
+      "solution_id": "SOL-0026",
+      "what": "Read-only auditor role is implemented for reports and logs.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Read-only auditor role is implemented for reports and logs.",
+      "source_line_range": [
+        44,
+        44
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [
+        "Read-only auditor role is implemented for reports and logs."
+      ],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0027",
+      "what": "Mobile usage dashboard is deferred until the responsive layout sprint.",
+      "source_transcript": "large_engineering_transcript",
+      "source_quote": "Mobile usage dashboard is deferred until the responsive layout sprint.",
+      "source_line_range": [
+        51,
+        51
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [
+        "Mobile usage dashboard is deferred until the responsive layout sprint."
+      ],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0028",
+      "what": "We implemented passwordless login using email magic links and FastAPI endpoints.",
+      "source_transcript": "sample",
+      "source_quote": "We implemented passwordless login using email magic links and FastAPI endpoints.",
+      "source_line_range": [
+        1,
+        1
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "api",
+        "fastapi"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0029",
+      "what": "Audit logging is built with Postgres tables and retention policies for seven years.",
+      "source_transcript": "sample",
+      "source_quote": "Audit logging is built with Postgres tables and retention policies for seven years.",
+      "source_line_range": [
+        2,
+        2
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "postgres"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0030",
+      "what": "The billing service supports CSV export for monthly invoice reports.",
+      "source_transcript": "sample",
+      "source_quote": "The billing service supports CSV export for monthly invoice reports.",
+      "source_line_range": [
+        3,
+        3
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0031",
+      "what": "Dashboard optimization is deferred until the next performance sprint.",
+      "source_transcript": "sample",
+      "source_quote": "Dashboard optimization is deferred until the next performance sprint.",
+      "source_line_range": [
+        4,
+        4
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [
+        "Dashboard optimization is deferred until the next performance sprint."
+      ],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0032",
+      "what": "Role management is out of scope for this release and only read-only roles are included.",
+      "source_transcript": "sample",
+      "source_quote": "Role management is out of scope for this release and only read-only roles are included.",
+      "source_line_range": [
+        5,
+        5
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [
+        "Role management is out of scope for this release and only read-only roles are included."
+      ],
+      "notes": []
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "GAP-0001",
+      "requirement_id": "REQ-0003",
+      "requirement_statement": "The customer portal must allow admins to invite users by email in bulk.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0024 scored 0.14: Customer documents are encrypted at rest using managed cloud keys."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0002",
+      "requirement_id": "REQ-0006",
+      "requirement_statement": "Audit logs should include actor, action, timestamp, IP address, and affected resource.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0026 scored 0.14: Read-only auditor role is implemented for reports and logs."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0003",
+      "requirement_id": "REQ-0008",
+      "requirement_statement": "The billing area should export invoice summaries in CSV and PDF format.",
+      "status": "partial",
+      "severity": "medium",
+      "evidence": [
+        "Closest solution SOL-0007 scored 0.50: PDF invoice export is deferred until the next billing milestone."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.66,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0004",
+      "requirement_id": "REQ-0010",
+      "requirement_statement": "Account admins need self-service role management for standard, billing, and security roles.",
+      "status": "partial",
+      "severity": "medium",
+      "evidence": [
+        "Closest solution SOL-0008 scored 0.40: Role management is currently read-only and self-service editing is out of scope for this release."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.66,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0005",
+      "requirement_id": "REQ-0011",
+      "requirement_statement": "The dashboard must load within two seconds for accounts with up to ten thousand users.",
+      "status": "partial",
+      "severity": "medium",
+      "evidence": [
+        "Closest solution SOL-0004 scored 0.22: The invite worker currently supports ten thousand CSV rows per upload."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.66,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0006",
+      "requirement_id": "REQ-0014",
+      "requirement_statement": "The system should detect suspicious login spikes and alert security admins.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0009 scored 0.12: The user list supports filtering by status, role, and last login date."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0007",
+      "requirement_id": "REQ-0024",
+      "requirement_statement": "Support tickets should attach the current page URL and account id automatically.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "No candidate solution was available for this requirement."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0008",
+      "requirement_id": "REQ-0032",
+      "requirement_statement": "The digest should summarize new users, deleted users, failed logins, and billing changes.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0030 scored 0.12: The billing service supports CSV export for monthly invoice reports."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0009",
+      "requirement_id": "REQ-0033",
+      "requirement_statement": "The system must support regional data residency for EU customers.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0018 scored 0.17: The in-app support ticket widget is implemented in the admin console."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0010",
+      "requirement_id": "REQ-0034",
+      "requirement_statement": "EU customer data should remain in EU storage and compute regions.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "No candidate solution was available for this requirement."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0011",
+      "requirement_id": "REQ-0035",
+      "requirement_statement": "Backups must run every day and support point-in-time recovery.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0018 scored 0.14: The in-app support ticket widget is implemented in the admin console."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0012",
+      "requirement_id": "REQ-0036",
+      "requirement_statement": "Recovery point objective should be no more than fifteen minutes.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "No candidate solution was available for this requirement."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0013",
+      "requirement_id": "REQ-0039",
+      "requirement_statement": "The analytics export must not include customer secrets or authentication tokens.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0025 scored 0.14: Ninety day customer document key rotation is implemented."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0014",
+      "requirement_id": "REQ-0040",
+      "requirement_statement": "Analytics records should be pseudonymized before export.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "No candidate solution was available for this requirement."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0015",
+      "requirement_id": "REQ-0042",
+      "requirement_statement": "CSV import errors must identify the row number and failed field.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0030 scored 0.12: The billing service supports CSV export for monthly invoice reports."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0016",
+      "requirement_id": "REQ-0043",
+      "requirement_statement": "The portal needs a read-only auditor role.",
+      "status": "partial",
+      "severity": "medium",
+      "evidence": [
+        "Closest solution SOL-0026 scored 0.80: Read-only auditor role is implemented for reports and logs."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.66,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0017",
+      "requirement_id": "REQ-0044",
+      "requirement_statement": "Auditor users should see reports and logs but cannot change settings.",
+      "status": "partial",
+      "severity": "medium",
+      "evidence": [
+        "Closest solution SOL-0026 scored 0.43: Read-only auditor role is implemented for reports and logs."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.66,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0018",
+      "requirement_id": "REQ-0045",
+      "requirement_statement": "The application must support legal hold for selected customer accounts.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0018 scored 0.14: The in-app support ticket widget is implemented in the admin console."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0019",
+      "requirement_id": "REQ-0046",
+      "requirement_statement": "Legal hold should prevent deletion until the hold is removed.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0031 scored 0.17: Dashboard optimization is deferred until the next performance sprint."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0020",
+      "requirement_id": "REQ-0048",
+      "requirement_statement": "Deployment status should show version, environment, region, and last deploy time.",
+      "status": "partial",
+      "severity": "medium",
+      "evidence": [
+        "Closest solution SOL-0009 scored 0.22: The user list supports filtering by status, role, and last login date."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.66,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0021",
+      "requirement_id": "REQ-0049",
+      "requirement_statement": "The mobile layout must support the billing summary and usage dashboard.",
+      "status": "partial",
+      "severity": "medium",
+      "evidence": [
+        "Closest solution SOL-0027 scored 0.57: Mobile usage dashboard is deferred until the responsive layout sprint."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.66,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0022",
+      "requirement_id": "REQ-0050",
+      "requirement_statement": "Mobile pages should preserve the same permission model as desktop.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "Closest solution SOL-0027 scored 0.14: Mobile usage dashboard is deferred until the responsive layout sprint."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0023",
+      "requirement_id": "REQ-0054",
+      "requirement_statement": "We require response time under two seconds for dashboard page loads.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "No candidate solution was available for this requirement."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0024",
+      "requirement_id": "REQ-0055",
+      "requirement_statement": "The roadmap needs self-service role management for account administrators.",
+      "status": "partial",
+      "severity": "medium",
+      "evidence": [
+        "Closest solution SOL-0008 scored 0.57: Role management is currently read-only and self-service editing is out of scope for this release."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.66,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    }
+  ]
+}

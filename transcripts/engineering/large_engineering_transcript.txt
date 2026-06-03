@@ -1,0 +1,53 @@
+Engineering Lead: We implemented SSO login for enterprise administrators using SAML and FastAPI.
+Backend Engineer: The SAML service supports metadata upload and validates identity provider certificates.
+Backend Engineer: Bulk user invites are implemented with CSV parsing and async processing.
+Platform Engineer: The invite worker currently supports ten thousand CSV rows per upload.
+Backend Engineer: Administrator audit logging is built in Postgres with seven year retention.
+Backend Engineer: Audit events store actor, action, timestamp, IP address, and affected resource.
+Frontend Engineer: The searchable audit log screen is implemented in the admin console.
+Billing Engineer: Invoice summary CSV export is complete for monthly billing reports.
+Billing Engineer: PDF invoice export is deferred until the next billing milestone.
+Billing Engineer: Billing exports include account id, invoice id, tax, credits, and total due.
+Engineering Lead: Role management is currently read-only and self-service editing is out of scope for this release.
+Frontend Engineer: The user list supports filtering by status, role, and last login date.
+Frontend Engineer: Dashboard performance work is deferred until after the analytics migration.
+Notifications Engineer: Failed SSO setup emails are implemented through the notification service.
+Security Engineer: Suspicious login spike detection is planned but not included in this release.
+Data Engineer: Daily usage metrics are exported to the analytics warehouse using the batch pipeline.
+Data Engineer: Usage export includes active users, API calls, storage usage, and workspace count.
+Platform Engineer: The API health endpoint is implemented for uptime monitoring.
+Platform Engineer: The health endpoint reports database, Redis cache, and queue status.
+Frontend Engineer: Custom branding supports logo upload and primary color configuration.
+Notifications Engineer: Email footer branding is not included yet.
+Compliance Engineer: Data deletion workflow is implemented with a thirty day SLA.
+Compliance Engineer: Deletion evidence records are written to an immutable audit table.
+Support Engineer: The in-app support ticket widget is implemented in the admin console.
+Support Engineer: Ticket creation attaches current page URL and account id automatically.
+Platform Engineer: Workspace-level feature flags are implemented for internal operators.
+Platform Engineer: Feature flag editing is restricted to internal operator permissions.
+API Engineer: Public API rate limiting is implemented with Redis token buckets.
+API Engineer: Per-contract enterprise rate limit configuration is not implemented yet.
+Billing Engineer: Payment method expiration notifications are implemented for billing owners.
+Billing Engineer: Alerts are sent thirty days, seven days, and one day before expiration.
+Notifications Engineer: Monday account activity digest emails are implemented.
+Notifications Engineer: Digest includes new users, deleted users, failed logins, and billing changes.
+Platform Engineer: Regional data residency for EU customers is planned for the infrastructure roadmap.
+Platform Engineer: EU-only storage and compute isolation is not available in the current deployment.
+Operations Engineer: Daily backups are running with point-in-time recovery support.
+Operations Engineer: Current recovery point objective is fifteen minutes.
+Security Engineer: Customer documents are encrypted at rest using managed cloud keys.
+Security Engineer: Ninety day customer document key rotation is implemented.
+Data Engineer: Analytics export excludes secrets and authentication tokens.
+Data Engineer: Analytics records are pseudonymized before warehouse export.
+Frontend Engineer: CSV import error messages identify row number and failed field.
+Frontend Engineer: The CSV import screen shows validation errors before submit.
+Engineering Lead: Read-only auditor role is implemented for reports and logs.
+Engineering Lead: Auditor permissions block changes to settings.
+Compliance Engineer: Legal hold is not implemented yet.
+Compliance Engineer: Deletion prevention for legal hold accounts is planned as future work.
+Internal Tools Engineer: Deployment status is visible to internal operators.
+Internal Tools Engineer: Deployment status shows version, environment, region, and last deploy time.
+Frontend Engineer: Mobile billing summary is implemented.
+Frontend Engineer: Mobile usage dashboard is deferred until the responsive layout sprint.
+Security Engineer: Mobile routes reuse the same permission checks as desktop.
+

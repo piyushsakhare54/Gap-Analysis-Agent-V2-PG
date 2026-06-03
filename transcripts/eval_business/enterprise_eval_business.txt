@@ -1,0 +1,61 @@
+Product Manager: The enterprise portal must support SAML SSO for all administrator accounts.
+Security Lead: SAML setup must allow identity provider metadata upload and certificate validation.
+Product Manager: Admins need bulk user invitation through CSV upload.
+Operations Lead: CSV invitation files must support at least ten thousand rows.
+Support Lead: CSV import errors should show row number, field name, and a human readable message.
+Compliance Lead: Administrator audit logs must be retained for seven years.
+Compliance Lead: Audit logs must include actor, action, timestamp, IP address, and affected resource.
+Customer Success: Admins need a searchable audit log screen in the admin console.
+Finance Lead: Monthly billing reports must export as CSV and PDF.
+Finance Lead: Billing exports must include account id, invoice id, tax, credits, and total due.
+Product Manager: Billing owners must receive payment method expiration alerts thirty days, seven days, and one day before expiration.
+Product Manager: Account admins must manage user roles without contacting support.
+Security Lead: The portal must include a read-only auditor role.
+Security Lead: Auditor users must view reports and logs but cannot change account settings.
+Support Lead: Dashboard pages must load in under two seconds for accounts with up to ten thousand users.
+Support Lead: User list pages must filter by status, role, and last login date.
+Product Manager: The portal must send notification emails when SSO setup fails.
+Security Lead: The system must detect suspicious login spikes and alert security admins.
+Data Lead: Daily usage metrics must export to the analytics warehouse.
+Data Lead: Usage metrics must include active users, API calls, storage usage, and workspace count.
+Data Lead: Analytics exports must exclude customer secrets and authentication tokens.
+Data Lead: Analytics records must be pseudonymized before export.
+Operations Lead: The public API must expose a health endpoint for uptime monitoring.
+Operations Lead: The health endpoint must report database, cache, and queue status.
+Security Lead: Public API endpoints must have configurable per-contract rate limits.
+Product Manager: Enterprise customers must configure custom branding.
+Product Manager: Branding must include logo upload, primary color, and email footer text.
+Compliance Lead: Customer data deletion requests must complete within thirty days.
+Compliance Lead: Data deletion must create an immutable evidence record.
+Compliance Lead: The application must support legal hold for selected customer accounts.
+Compliance Lead: Legal hold must prevent deletion until the hold is removed.
+Product Manager: EU customers must have regional data residency.
+Product Manager: EU customer data must remain in EU storage and compute regions.
+Operations Lead: Backups must run every day.
+Operations Lead: Backups must support point-in-time recovery with fifteen minute recovery point objective.
+Security Lead: Customer documents must be encrypted at rest.
+Security Lead: Customer document encryption keys must rotate every ninety days.
+Customer Success: Admins must receive a Monday account activity digest email.
+Customer Success: The digest must summarize new users, deleted users, failed logins, and billing changes.
+Support Lead: Customers need an in-app support ticket widget.
+Support Lead: Support tickets must attach current page URL and account id automatically.
+Product Manager: Workspace-level feature flags must be editable by internal operators only.
+Operations Lead: Internal operators need deployment status visibility.
+Operations Lead: Deployment status must show version, environment, region, and last deploy time.
+Product Manager: The mobile layout must support billing summary pages.
+Product Manager: The mobile layout must support the usage dashboard.
+Security Lead: Mobile pages must preserve the same permission model as desktop.
+Product Manager: The system must provide dark mode for the admin console.
+Accessibility Lead: Admin console pages must meet WCAG 2.1 AA contrast requirements.
+Accessibility Lead: All interactive controls must be keyboard accessible.
+Support Lead: The product must include live chat support inside the portal.
+Product Manager: Customers must be able to configure custom domains for the portal.
+Security Lead: Custom domains must support automatic TLS certificate provisioning.
+Data Lead: Customers must export all account data as a ZIP archive.
+Compliance Lead: The export archive must include users, roles, audit logs, invoices, and support tickets.
+Product Manager: Admins must configure webhook endpoints for account events.
+Security Lead: Webhook delivery must sign payloads with an HMAC secret.
+Operations Lead: Failed webhook deliveries must retry with exponential backoff.
+Product Manager: The portal must support SCIM user provisioning.
+Security Lead: SCIM provisioning must support create, update, deactivate, and group assignment events.
+

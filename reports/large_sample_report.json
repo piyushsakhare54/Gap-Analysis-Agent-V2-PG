@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "generated_at": "2026-06-02T10:26:12.040964+00:00",
+    "mode": "large",
+    "business_transcript_count": 1,
+    "engineering_transcript_count": 1,
+    "requirement_count": 5,
+    "solution_count": 5,
+    "gap_count": 2,
+    "chunk_count": 2,
+    "embedding_provider": "hashing",
+    "embedding_model": "BAAI/bge-m3",
+    "top_k": 5,
+    "min_score": 0.15,
+    "warnings": [],
+    "audit": {
+      "critic": "deterministic",
+      "retrieval": "cosine"
+    }
+  },
+  "requirements": [
+    {
+      "requirement_id": "REQ-0001",
+      "statement": "The customer portal must support passwordless login for enterprise users.",
+      "source_transcript": "sample",
+      "source_quote": "The customer portal must support passwordless login for enterprise users.",
+      "source_line_range": [
+        1,
+        1
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0002",
+      "statement": "We need audit logs retained for at least seven years for regulated customers.",
+      "source_transcript": "sample",
+      "source_quote": "We need audit logs retained for at least seven years for regulated customers.",
+      "source_line_range": [
+        2,
+        2
+      ],
+      "confidence": 0.72,
+      "constraints": [
+        "We need audit logs retained for at least seven years for regulated customers."
+      ],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0003",
+      "statement": "The system should export monthly billing reports in CSV format.",
+      "source_transcript": "sample",
+      "source_quote": "The system should export monthly billing reports in CSV format.",
+      "source_line_range": [
+        3,
+        3
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0004",
+      "statement": "We require response time under two seconds for dashboard page loads.",
+      "source_transcript": "sample",
+      "source_quote": "We require response time under two seconds for dashboard page loads.",
+      "source_line_range": [
+        4,
+        4
+      ],
+      "confidence": 0.72,
+      "constraints": [
+        "We require response time under two seconds for dashboard page loads."
+      ],
+      "notes": []
+    },
+    {
+      "requirement_id": "REQ-0005",
+      "statement": "The roadmap needs self-service role management for account administrators.",
+      "source_transcript": "sample",
+      "source_quote": "The roadmap needs self-service role management for account administrators.",
+      "source_line_range": [
+        5,
+        5
+      ],
+      "confidence": 0.72,
+      "constraints": [],
+      "notes": []
+    }
+  ],
+  "solutions": [
+    {
+      "solution_id": "SOL-0001",
+      "what": "We implemented passwordless login using email magic links and FastAPI endpoints.",
+      "source_transcript": "sample",
+      "source_quote": "We implemented passwordless login using email magic links and FastAPI endpoints.",
+      "source_line_range": [
+        1,
+        1
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "api",
+        "fastapi"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0002",
+      "what": "Audit logging is built with Postgres tables and retention policies for seven years.",
+      "source_transcript": "sample",
+      "source_quote": "Audit logging is built with Postgres tables and retention policies for seven years.",
+      "source_line_range": [
+        2,
+        2
+      ],
+      "confidence": 0.72,
+      "tech_stack": [
+        "postgres"
+      ],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0003",
+      "what": "The billing service supports CSV export for monthly invoice reports.",
+      "source_transcript": "sample",
+      "source_quote": "The billing service supports CSV export for monthly invoice reports.",
+      "source_line_range": [
+        3,
+        3
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0004",
+      "what": "Dashboard optimization is deferred until the next performance sprint.",
+      "source_transcript": "sample",
+      "source_quote": "Dashboard optimization is deferred until the next performance sprint.",
+      "source_line_range": [
+        4,
+        4
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [
+        "Dashboard optimization is deferred until the next performance sprint."
+      ],
+      "scope_limits": [],
+      "notes": []
+    },
+    {
+      "solution_id": "SOL-0005",
+      "what": "Role management is out of scope for this release and only read-only roles are included.",
+      "source_transcript": "sample",
+      "source_quote": "Role management is out of scope for this release and only read-only roles are included.",
+      "source_line_range": [
+        5,
+        5
+      ],
+      "confidence": 0.72,
+      "tech_stack": [],
+      "deferred": [],
+      "scope_limits": [
+        "Role management is out of scope for this release and only read-only roles are included."
+      ],
+      "notes": []
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "GAP-0001",
+      "requirement_id": "REQ-0004",
+      "requirement_statement": "We require response time under two seconds for dashboard page loads.",
+      "status": "unaddressed",
+      "severity": "high",
+      "evidence": [
+        "No candidate solution was available for this requirement."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.78,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    },
+    {
+      "gap_id": "GAP-0002",
+      "requirement_id": "REQ-0005",
+      "requirement_statement": "The roadmap needs self-service role management for account administrators.",
+      "status": "partial",
+      "severity": "medium",
+      "evidence": [
+        "Closest solution SOL-0005 scored 0.29: Role management is out of scope for this release and only read-only roles are included."
+      ],
+      "recommendation": "Confirm ownership and add an engineering solution that explicitly covers this requirement.",
+      "confidence": 0.66,
+      "verified": true,
+      "critic_notes": [
+        "Verified by deterministic critic."
+      ]
+    }
+  ]
+}

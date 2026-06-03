@@ -1,0 +1,6 @@
+Product Manager: The customer portal must support passwordless login for enterprise users.
+Compliance Lead: We need audit logs retained for at least seven years for regulated customers.
+Operations: The system should export monthly billing reports in CSV format.
+Support Lead: We require response time under two seconds for dashboard page loads.
+Product Manager: The roadmap needs self-service role management for account administrators.
+

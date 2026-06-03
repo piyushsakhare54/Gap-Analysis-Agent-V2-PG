@@ -1,0 +1,6 @@
+Engineering Lead: We implemented passwordless login using email magic links and FastAPI endpoints.
+Platform Engineer: Audit logging is built with Postgres tables and retention policies for seven years.
+Backend Engineer: The billing service supports CSV export for monthly invoice reports.
+Frontend Engineer: Dashboard optimization is deferred until the next performance sprint.
+Engineering Lead: Role management is out of scope for this release and only read-only roles are included.
+
